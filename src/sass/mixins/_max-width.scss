@@ -1,0 +1,7 @@
+// --------------------------------------------------
+// IE 6 CSS to hack 
+// --------------------------------------------------
+@mixin max-width($value) {
+	@include rem(max-width, $value);
+	_width: unquote('expression(document.body.clientWidth > ' + parseInt($value) + ' ? "' + $value + '" : "100%")');
+}

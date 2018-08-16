@@ -1,0 +1,115 @@
+/*************************** Base Styles ****************************/
+
+//html,
+body {
+//	background-color: pink;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+//	background-color: $background-color;
+//	color: $font-color;
+
+//	font-family: "Open-Sans", sans-serif;
+	font-family: "Muli", sans-serif;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+
+/**
+//  background-image: url(../img/dev/Main-Page_2560_2_a.png);
+
+	background-image: url(../img/dev/Main-Page_1366x768_2_a.png);
+//	background-position: 30px 0;
+
+//  background-image: url(../img/dev/Main-Page_tablet-768x1024_2_a.png);
+//  background-image: url(../img/dev/Main-Page_tablet-768x1024_2_a.png);
+// background-image: url(../img/dev/Main-Page_mobile-360x640_2_a.png);
+
+	background-repeat: no-repeat;
+/**/
+
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+i, em {
+	font-style: italic;
+}
+
+//::-webkit-search-decoration,
+//::-webkit-search-cancel-button,
+//::-webkit-search-results-button,
+//::-webkit-search-results-decoration { display: none; }
+//
+//::-ms-clear,
+//::-ms-reveal { display: none; }
+//
+//:focus { outline: none !important; }
+//:focus::-webkit-input-placeholder { color: transparent }
+//:focus::-moz-placeholder { color: transparent }
+//:focus:-moz-placeholder { color: transparent }
+//:focus:-ms-input-placeholder { color: transparent }
+//
+//
+//select {
+//	background-color: transparent;
+//	border: 0;
+//	-webkit-appearance: none;
+//	-moz-appearance: none;
+//	-ms-appearance: none;
+//	-o-appearance: none;
+//	appearance: none;
+//	&::-ms-expand {
+//		display: none;
+//	}
+//}
+//
+//input {
+//	&[type="text"] {
+//		background-color: transparent;
+//		border: 0;
+//	}
+//}
+
+/**
+img {
+
+	// https://stackoverflow.com/questions/9945363/image-scaling-causes-poor-quality-in-firefox-internet-explorer-but-not-chrome?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+	// applies to GIF and PNG images; avoids blurry edges
+    image-rendering: -moz-crisp-edges;         // Firefox 
+    image-rendering:   -o-crisp-edges;         // Opera 
+    image-rendering: -webkit-optimize-contrast;// Webkit (non-standard naming) 
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: bicubic;           // IE (non-standard property) 
+ //    -ms-interpolation-mode: nearest-neighbor;
+
+ 	width: 100%;
+}
+/**/
+
+//================================================================================================================================
+
+/**/
+.row {
+  border: solid 1px red;
+
+//	background-color: rgba(255,255,0,0.5);
+//	background-color: #00ff00;
+//  @include background-color(255, 255, 0, 0.3);
+
+//	margin: 20px 0;
+//	margin: 0 0 20px;
+}
+
+[class*="col"] {
+  border: solid 1px blue;
+
+//  @include background-color(0, 0, 255, 0.2);
+
+//	background-color: #ff0000;
+//	@include opacity(0.5);
+}
+/**/

@@ -1,0 +1,48 @@
+// --------------------------------------------------
+// RGBA on Internet Explorer 6+
+// https://coderwall.com/p/jkefga/rgba-on-internet-explorer-7
+// --------------------------------------------------
+
+
+@function dec-to-hex($d) {
+	$hexVals: "A" "B" "C" "D" "E" "F";
+	$base: 16;
+	$quotient: $d;
+	$result: "";
+	@if $d == 0 {
+		$result: "00";
+	}
+	@while $quotient != 0 {
+		$mod: $quotient % $base;
+		$quotient: floor($quotient / $base);
+		@if $mod > 9 {
+		    $mod: nth($hexVals, $mod - 9);
+		}
+		@if $d < $base {
+		    $result: "0" + $mod;
+		} @else {
+		    $result: $mod + $result;
+		}
+	}
+	@return $result;
+}
+
+
+@mixin background-color($r, $g, $b ,$a) {
+
+	background: transparent; // Feedback color 
+	background: rgba($r, $g, $b ,$a); // For modern browsers 
+
+	$argb: '#' + dec-to-hex(round($a * 255)) + dec-to-hex($r) + dec-to-hex($g) + dec-to-hex($b);
+	
+//	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#330000ff', EndColorStr='#330000ff')"; // For IE8 
+//	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#330000ff', EndColorStr='#330000ff'); // For IE6,IE7 
+
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='" + $argb + "', EndColorStr='" + $argb + "')"; // For IE8 
+	filter: unquote("progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='" + $argb + "', EndColorStr='" + $argb + "')"); // For IE6,IE7
+
+
+
+	zoom: 1!important; // Trigger hasLayout 
+}

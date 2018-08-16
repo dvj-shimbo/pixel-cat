@@ -1,0 +1,76 @@
+// Variables
+
+
+//$baseFontSize: 10; // Based on HTML reset html { font-size: 62.5%; }
+$baseFontSize: 16;
+
+
+
+
+
+$columns: 12;
+
+
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "tablet-wide":  1024px,
+    "desktop":      1248px,
+    "desktop-wide": 1440px
+);
+
+
+// Breakpoints:
+//
+// ph - phone
+// pw - phone-wide
+// pt - phablet
+// ts - tablet-small
+// tb - tablet
+// tw - tablet-wide
+// dt - desktop
+// dw - desktop-wide
+
+//$breakpoints: (
+//    "ph": 400px,
+//    "pw": 480px,
+//    "pt": 560px,
+//    "ts": 640px,
+//    "tb": 768px,
+//    "tw": 1024px,
+//    "dt": 1248px,
+//    "dw": 1440px
+//);
+
+
+
+
+//
+////$background-color: pink;
+//$background-color: #fefefe;
+////$background-color: #0f0f0f;
+//
+//$background-color-dark: #0f0f0f;
+////$background-color-tag: #0f0f0f;
+//
+////$font-color: red;
+//$font-color: #666666;
+////$font-color: #0c0c0c;
+//
+//$font-color-light: #8b8b8b;
+//
+//$font-color-tag: #9b9ea1;
+//
+//
+////$row-background-color: #f2f2ed;
+//
+//////$row-background-color: red;
+////$row-background-color: #f6f6f6;
+//
+//////$row-arrow-color: red;
+////$row-arrow-color: #aaaaaa;
+//
+//

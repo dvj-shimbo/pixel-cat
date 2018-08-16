@@ -1,0 +1,93 @@
+/*************************** Bourbon ****************************/
+//
+//p {
+//    @include font-face(My-Font, "fonts/my_font/MyFont-Italic", normal, italic, $file-formats: eot svg ttf woff woff2);
+//}
+//
+
+
+
+// Vertical Rhythm (w/Bourbon)
+// https://codepen.io/emah/pen/ECyGv
+
+$base-font-size: em(16);
+$base-line-height: em(24);
+
+$h1-font-size: em(38);
+$h1-line: $base-line-height/$h1-font-size * 1em;
+$h1-lines: 2;
+$h1-line-height: $h1-line * $h1-lines;
+$h1-margin-top: 0 * $h1-line;
+$h1-margin-bottom: 1 * $h1-line;
+
+$h2-font-size: em(28);
+$h2-line: $base-line-height/$h2-font-size * 1em;
+$h2-lines: 2;
+$h2-line-height: $h2-line * $h2-lines;
+$h2-margin-top: 0 * $h2-line;
+$h2-margin-bottom: 1 * $h2-line;
+
+$h3-font-size: em(21);
+$h3-line: $base-line-height/$h3-font-size * 1em;
+$h3-lines: 1;
+$h3-line-height: $h3-line * $h3-lines;
+$h3-margin-top: 0 * $h3-line;
+$h3-margin-bottom: 1 * $h3-line;
+
+$h4-font-size: em(16);
+$h4-line: $base-line-height/$h4-font-size * 1em;
+$h4-lines: 1;
+$h4-line-height: $h4-line * $h4-lines;
+$h4-margin-top: 0 * $h4-line;
+$h4-margin-bottom: 1 * $h4-line;
+
+/* Styles ht: http://www.gridlover.net/app/ */
+.container {
+  margin: 2em auto;
+  max-width: 30em;
+}
+
+body {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+p, ul, ol, blockquote, form, iframe, table, hr, td, th, label, textarea, section, article, aside {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  margin: 0 0 $base-line-height 0;
+}
+
+ul, ol {
+  padding: 0;
+}
+
+blockquote {
+  margin-left: 2em;
+}
+
+h1 {
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+  margin: 0 0 $h1-margin-bottom 0;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  margin: 0 0 $h2-margin-bottom 0;
+}
+
+h3 {
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  margin: 0 0 $h3-margin-bottom 0;
+}
+
+h4, h5, h6 {
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+  margin: 0 0 $h4-margin-bottom 0;
+}
+
+

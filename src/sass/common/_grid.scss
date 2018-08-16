@@ -1,0 +1,58 @@
+/*************************** Grid System ****************************/
+
+//* {
+//	box-sizing: border-box;
+//}
+
+.row {
+	display: table;
+	table-layout: fixed;
+	
+	width: 100%;
+
+//	@include max-width(900px);
+
+}
+
+
+
+[class*="col"] {
+	-webkit-box-sizing: border-box; // Safari <= 5
+	-moz-box-sizing: border-box; // Firefox <= 19
+	box-sizing: border-box;
+	display: table-cell;
+}
+
+[class*="col-"] {
+	float: left;
+	width: 100%;
+}
+
+@for $i from 1 through $columns {
+	.col-#{$i} {
+		width: $i * 100% / $columns;
+//		width: $i * 100% / $columns - 0.1%;
+	}
+}
+
+@each $current-breakpoint in $breakpoints {
+
+	$breakpoint-name: nth($current-breakpoint, 1);
+	$min-width: nth($current-breakpoint, 2);
+//	$max-width: $min-width - 1px;
+
+	@media only screen and (min-width: #{$min-width}) {
+
+		.col-#{$breakpoint-name} {
+			float: none;
+		}
+
+		@for $i from 1 through $columns {
+			.col-#{$breakpoint-name}-#{$i} {
+				width: $i * 100% / $columns;
+//				width: $i * 100% / $columns - 0.1%;
+			}
+		}
+
+	}
+}

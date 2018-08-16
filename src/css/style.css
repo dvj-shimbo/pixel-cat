@@ -1,0 +1,967 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, node_modules/reset-css/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, node_modules/reset-css/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* line 31, node_modules/reset-css/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, node_modules/reset-css/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, node_modules/reset-css/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 39, node_modules/reset-css/_reset.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 44, node_modules/reset-css/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*************************** Muli Font ****************************/
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/Muli/Regular/Muli-Regular.eot");
+  src: url("../fonts/Muli/Regular/Muli-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Muli/Regular/Muli-Regular.woff2") format("woff2"), url("../fonts/Muli/Regular/Muli-Regular.woff") format("woff"), url("../fonts/Muli/Regular/Muli-Regular.ttf") format("truetype"), url("../fonts/Muli/Regular/Muli-Regular.svg#MuliRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/Muli/Bold/Muli-Bold.eot");
+  src: url("../fonts/Muli/Bold/Muli-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Muli/Bold/Muli-Bold.woff2") format("woff2"), url("../fonts/Muli/Bold/Muli-Bold.woff") format("woff"), url("../fonts/Muli/Bold/Muli-Bold.ttf") format("truetype"), url("../fonts/Muli/Bold/Muli-Bold.svg#MuliBold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/Muli/Italic/Muli-Italic.eot");
+  src: url("../fonts/Muli/Italic/Muli-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Muli/Italic/Muli-Italic.woff2") format("woff2"), url("../fonts/Muli/Italic/Muli-Italic.woff") format("woff"), url("../fonts/Muli/Italic/Muli-Italic.ttf") format("truetype"), url("../fonts/Muli/Italic/Muli-Italic.svg#MuliItalic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/Muli/BoldItalic/Muli-BoldItalic.eot");
+  src: url("../fonts/Muli/BoldItalic/Muli-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Muli/BoldItalic/Muli-BoldItalic.woff2") format("woff2"), url("../fonts/Muli/BoldItalic/Muli-BoldItalic.woff") format("woff"), url("../fonts/Muli/BoldItalic/Muli-BoldItalic.ttf") format("truetype"), url("../fonts/Muli/BoldItalic/Muli-BoldItalic.svg#MuliBoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Muli-ExtraLight";
+  src: url("../fonts/Muli/ExtraLight/Muli-ExtraLight.eot");
+  src: url("../fonts/Muli/ExtraLight/Muli-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Muli/ExtraLight/Muli-ExtraLight.woff2") format("woff2"), url("../fonts/Muli/ExtraLight/Muli-ExtraLight.woff") format("woff"), url("../fonts/Muli/ExtraLight/Muli-ExtraLight.ttf") format("truetype"), url("../fonts/Muli/ExtraLight/Muli-ExtraLight.svg#MuliExtraLight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Muli-ExtraLight";
+  src: url("../fonts/Muli/ExtraLightItalic/Muli-ExtraLightItalic.eot");
+  src: url("../fonts/Muli/ExtraLightItalic/Muli-ExtraLightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Muli/ExtraLightItalic/Muli-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Muli/ExtraLightItalic/Muli-ExtraLightItalic.woff") format("woff"), url("../fonts/Muli/ExtraLightItalic/Muli-ExtraLightItalic.ttf") format("truetype"), url("../fonts/Muli/ExtraLightItalic/Muli-ExtraLightItalic.svg#MuliExtraLightItalic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Muli-Light";
+  src: url("../fonts/Muli/Light/Muli-Light.eot");
+  src: url("../fonts/Muli/Light/Muli-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Muli/Light/Muli-Light.woff2") format("woff2"), url("../fonts/Muli/Light/Muli-Light.woff") format("woff"), url("../fonts/Muli/Light/Muli-Light.ttf") format("truetype"), url("../fonts/Muli/Light/Muli-Light.svg#MuliLight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Muli-Light";
+  src: url("../fonts/Muli/LightItalic/Muli-LightItalic.eot");
+  src: url("../fonts/Muli/LightItalic/Muli-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Muli/LightItalic/Muli-LightItalic.woff2") format("woff2"), url("../fonts/Muli/LightItalic/Muli-LightItalic.woff") format("woff"), url("../fonts/Muli/LightItalic/Muli-LightItalic.ttf") format("truetype"), url("../fonts/Muli/LightItalic/Muli-LightItalic.svg#MuliLightItalic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Muli-SemiBold";
+  src: url("../fonts/Muli/SemiBold/Muli-SemiBold.eot");
+  src: url("../fonts/Muli/SemiBold/Muli-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Muli/SemiBold/Muli-SemiBold.woff2") format("woff2"), url("../fonts/Muli/SemiBold/Muli-SemiBold.woff") format("woff"), url("../fonts/Muli/SemiBold/Muli-SemiBold.ttf") format("truetype"), url("../fonts/Muli/SemiBold/Muli-SemiBold.svg#MuliSemiBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Muli-SemiBold";
+  src: url("../fonts/Muli/SemiBoldItalic/Muli-SemiBoldItalic.eot");
+  src: url("../fonts/Muli/SemiBoldItalic/Muli-SemiBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Muli/SemiBoldItalic/Muli-SemiBoldItalic.woff2") format("woff2"), url("../fonts/Muli/SemiBoldItalic/Muli-SemiBoldItalic.woff") format("woff"), url("../fonts/Muli/SemiBoldItalic/Muli-SemiBoldItalic.ttf") format("truetype"), url("../fonts/Muli/SemiBoldItalic/Muli-SemiBoldItalic.svg#MuliSemiBoldItalic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Muli-ExtraBold";
+  src: url("../fonts/Muli/ExtraBold/Muli-ExtraBold.eot");
+  src: url("../fonts/Muli/ExtraBold/Muli-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Muli/ExtraBold/Muli-ExtraBold.woff2") format("woff2"), url("../fonts/Muli/ExtraBold/Muli-ExtraBold.woff") format("woff"), url("../fonts/Muli/ExtraBold/Muli-ExtraBold.ttf") format("truetype"), url("../fonts/Muli/ExtraBold/Muli-ExtraBold.svg#MuliExtraBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Muli-ExtraBold";
+  src: url("../fonts/Muli/ExtraBoldItalic/Muli-ExtraBoldItalic.eot");
+  src: url("../fonts/Muli/ExtraBoldItalic/Muli-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Muli/ExtraBoldItalic/Muli-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/Muli/ExtraBoldItalic/Muli-ExtraBoldItalic.woff") format("woff"), url("../fonts/Muli/ExtraBoldItalic/Muli-ExtraBoldItalic.ttf") format("truetype"), url("../fonts/Muli/ExtraBoldItalic/Muli-ExtraBoldItalic.svg#MuliExtraBoldItalic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Muli-Black";
+  src: url("../fonts/Muli/Black/Muli-Black.eot");
+  src: url("../fonts/Muli/Black/Muli-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Muli/Black/Muli-Black.woff2") format("woff2"), url("../fonts/Muli/Black/Muli-Black.woff") format("woff"), url("../fonts/Muli/Black/Muli-Black.ttf") format("truetype"), url("../fonts/Muli/Black/Muli-Black.svg#MuliBlack") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Muli-Black";
+  src: url("../fonts/Muli/BlackItalic/Muli-BlackItalic.eot");
+  src: url("../fonts/Muli/BlackItalic/Muli-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Muli/BlackItalic/Muli-BlackItalic.woff2") format("woff2"), url("../fonts/Muli/BlackItalic/Muli-BlackItalic.woff") format("woff"), url("../fonts/Muli/BlackItalic/Muli-BlackItalic.ttf") format("truetype"), url("../fonts/Muli/BlackItalic/Muli-BlackItalic.svg#MuliBlackItalic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+/**************************** Icon Font *****************************/
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons/icons.eot?85cb4a69c0835679230ed4bd64fc6c7b?#iefix") format("embedded-opentype"), url("../fonts/icons/icons.woff2?85cb4a69c0835679230ed4bd64fc6c7b") format("woff2"), url("../fonts/icons/icons.woff?85cb4a69c0835679230ed4bd64fc6c7b") format("woff"), url("../fonts/icons/icons.ttf?85cb4a69c0835679230ed4bd64fc6c7b") format("truetype"), url("../fonts/icons/icons.svg?85cb4a69c0835679230ed4bd64fc6c7b#icons") format("svg");
+}
+
+/* line 11, src/icon-font-generator/_icons.scss */
+[class*="icon-"]:before {
+  font-family: icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  vertical-align: top;
+  line-height: 1;
+}
+
+/* line 19, src/icon-font-generator/_icons.scss */
+.icon-arrow-right:before {
+  content: "\f101";
+}
+
+/*************************** Base Styles ****************************/
+/* line 4, src/sass/common/_base.scss */
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: "Muli", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /**
+//  background-image: url(../img/dev/Main-Page_2560_2_a.png);
+
+	background-image: url(../img/dev/Main-Page_1366x768_2_a.png);
+//	background-position: 30px 0;
+
+//  background-image: url(../img/dev/Main-Page_tablet-768x1024_2_a.png);
+//  background-image: url(../img/dev/Main-Page_tablet-768x1024_2_a.png);
+// background-image: url(../img/dev/Main-Page_mobile-360x640_2_a.png);
+
+	background-repeat: no-repeat;
+/**/
+}
+
+/* line 34, src/sass/common/_base.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 38, src/sass/common/_base.scss */
+i, em {
+  font-style: italic;
+}
+
+/**
+img {
+
+	// https://stackoverflow.com/questions/9945363/image-scaling-causes-poor-quality-in-firefox-internet-explorer-but-not-chrome?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+	// applies to GIF and PNG images; avoids blurry edges
+    image-rendering: -moz-crisp-edges;         // Firefox 
+    image-rendering:   -o-crisp-edges;         // Opera 
+    image-rendering: -webkit-optimize-contrast;// Webkit (non-standard naming) 
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: bicubic;           // IE (non-standard property) 
+ //    -ms-interpolation-mode: nearest-neighbor;
+
+ 	width: 100%;
+}
+/**/
+/**/
+/* line 96, src/sass/common/_base.scss */
+.row {
+  border: solid 1px red;
+}
+
+/* line 107, src/sass/common/_base.scss */
+[class*="col"] {
+  border: solid 1px blue;
+}
+
+/**/
+/*************************** Grid System ****************************/
+/* line 7, src/sass/common/_grid.scss */
+.row {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* line 19, src/sass/common/_grid.scss */
+[class*="col"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: table-cell;
+}
+
+/* line 26, src/sass/common/_grid.scss */
+[class*="col-"] {
+  float: left;
+  width: 100%;
+}
+
+/* line 32, src/sass/common/_grid.scss */
+.col-1 {
+  width: 8.33333%;
+}
+
+/* line 32, src/sass/common/_grid.scss */
+.col-2 {
+  width: 16.66667%;
+}
+
+/* line 32, src/sass/common/_grid.scss */
+.col-3 {
+  width: 25%;
+}
+
+/* line 32, src/sass/common/_grid.scss */
+.col-4 {
+  width: 33.33333%;
+}
+
+/* line 32, src/sass/common/_grid.scss */
+.col-5 {
+  width: 41.66667%;
+}
+
+/* line 32, src/sass/common/_grid.scss */
+.col-6 {
+  width: 50%;
+}
+
+/* line 32, src/sass/common/_grid.scss */
+.col-7 {
+  width: 58.33333%;
+}
+
+/* line 32, src/sass/common/_grid.scss */
+.col-8 {
+  width: 66.66667%;
+}
+
+/* line 32, src/sass/common/_grid.scss */
+.col-9 {
+  width: 75%;
+}
+
+/* line 32, src/sass/common/_grid.scss */
+.col-10 {
+  width: 83.33333%;
+}
+
+/* line 32, src/sass/common/_grid.scss */
+.col-11 {
+  width: 91.66667%;
+}
+
+/* line 32, src/sass/common/_grid.scss */
+.col-12 {
+  width: 100%;
+}
+
+@media only screen and (min-width: 400px) {
+  /* line 46, src/sass/common/_grid.scss */
+  .col-phone {
+    float: none;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-1 {
+    width: 8.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-2 {
+    width: 16.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-3 {
+    width: 25%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-4 {
+    width: 33.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-5 {
+    width: 41.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-6 {
+    width: 50%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-7 {
+    width: 58.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-8 {
+    width: 66.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-9 {
+    width: 75%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-10 {
+    width: 83.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-11 {
+    width: 91.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  /* line 46, src/sass/common/_grid.scss */
+  .col-phone-wide {
+    float: none;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-wide-1 {
+    width: 8.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-wide-2 {
+    width: 16.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-wide-3 {
+    width: 25%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-wide-4 {
+    width: 33.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-wide-5 {
+    width: 41.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-wide-6 {
+    width: 50%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-wide-7 {
+    width: 58.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-wide-8 {
+    width: 66.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-wide-9 {
+    width: 75%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-wide-10 {
+    width: 83.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-wide-11 {
+    width: 91.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phone-wide-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 560px) {
+  /* line 46, src/sass/common/_grid.scss */
+  .col-phablet {
+    float: none;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phablet-1 {
+    width: 8.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phablet-2 {
+    width: 16.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phablet-3 {
+    width: 25%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phablet-4 {
+    width: 33.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phablet-5 {
+    width: 41.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phablet-6 {
+    width: 50%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phablet-7 {
+    width: 58.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phablet-8 {
+    width: 66.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phablet-9 {
+    width: 75%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phablet-10 {
+    width: 83.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phablet-11 {
+    width: 91.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-phablet-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  /* line 46, src/sass/common/_grid.scss */
+  .col-tablet-small {
+    float: none;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-small-1 {
+    width: 8.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-small-2 {
+    width: 16.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-small-3 {
+    width: 25%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-small-4 {
+    width: 33.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-small-5 {
+    width: 41.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-small-6 {
+    width: 50%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-small-7 {
+    width: 58.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-small-8 {
+    width: 66.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-small-9 {
+    width: 75%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-small-10 {
+    width: 83.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-small-11 {
+    width: 91.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-small-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 46, src/sass/common/_grid.scss */
+  .col-tablet {
+    float: none;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-1 {
+    width: 8.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-2 {
+    width: 16.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-3 {
+    width: 25%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-4 {
+    width: 33.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-5 {
+    width: 41.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-6 {
+    width: 50%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-7 {
+    width: 58.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-8 {
+    width: 66.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-9 {
+    width: 75%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-10 {
+    width: 83.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-11 {
+    width: 91.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* line 46, src/sass/common/_grid.scss */
+  .col-tablet-wide {
+    float: none;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-wide-1 {
+    width: 8.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-wide-2 {
+    width: 16.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-wide-3 {
+    width: 25%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-wide-4 {
+    width: 33.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-wide-5 {
+    width: 41.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-wide-6 {
+    width: 50%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-wide-7 {
+    width: 58.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-wide-8 {
+    width: 66.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-wide-9 {
+    width: 75%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-wide-10 {
+    width: 83.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-wide-11 {
+    width: 91.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-tablet-wide-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1248px) {
+  /* line 46, src/sass/common/_grid.scss */
+  .col-desktop {
+    float: none;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-1 {
+    width: 8.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-2 {
+    width: 16.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-3 {
+    width: 25%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-4 {
+    width: 33.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-5 {
+    width: 41.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-6 {
+    width: 50%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-7 {
+    width: 58.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-8 {
+    width: 66.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-9 {
+    width: 75%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-10 {
+    width: 83.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-11 {
+    width: 91.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  /* line 46, src/sass/common/_grid.scss */
+  .col-desktop-wide {
+    float: none;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-wide-1 {
+    width: 8.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-wide-2 {
+    width: 16.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-wide-3 {
+    width: 25%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-wide-4 {
+    width: 33.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-wide-5 {
+    width: 41.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-wide-6 {
+    width: 50%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-wide-7 {
+    width: 58.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-wide-8 {
+    width: 66.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-wide-9 {
+    width: 75%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-wide-10 {
+    width: 83.33333%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-wide-11 {
+    width: 91.66667%;
+  }
+  /* line 51, src/sass/common/_grid.scss */
+  .col-desktop-wide-12 {
+    width: 100%;
+  }
+}
+
+/*************************** Work Sample Section Styles ****************************/
+/* line 4, src/sass/components/sections/_work-sample.scss */
+.work-sample {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 14, src/sass/components/sections/_work-sample.scss */
+.work-sample .col-tablet-wide-5 {
+  padding: 12% 3%;
+}
+
+/* line 19, src/sass/components/sections/_work-sample.scss */
+.work-sample .col-tablet-wide-5:last-child {
+  margin-left: 58.33333%;
+}
+
+/* line 24, src/sass/components/sections/_work-sample.scss */
+.work-sample .col-tablet-wide-5 a {
+  background-color: rgba(255, 255, 0, 0.3);
+  width: 78%;
+  display: block;
+  text-decoration: none;
+  /**
+			.icon-arrow-right {
+				background-color: rgba(0,255,0,0.2);
+				
+//				color: transparent;
+				
+				@include rem(font-size, 26px);
+				
+				position: absolute;
+				margin-top: 3%;
+//				margin-left: 5%;
+			}
+/**/
+  /**
+			&:hover {
+				h4 {
+					&:after {
+						color: red;
+	//					margin-left: 5%;
+					}
+				}
+			}
+/**/
+  /**
+			&.animated {
+				h4 {
+					&:after {
+//						margin-left: 5%;
+						
+						@-webkit-keyframes arrow-right {
+							0%, 100% {
+								margin-left: 0%;
+							}
+							50% {
+								margin-left: 5%;
+							}
+						}
+						@keyframes arrow-right {
+							0%, 100% {
+								margin-left: 0%;
+							}
+							50% {
+								margin-left: 5%;
+							}
+						}
+						-webkit-animation: arrow-right 0.8s ease-in-out 1 0.1s;
+						animation: arrow-right 0.8s ease-in-out 1 0.1s;
+						
+					}
+				}
+			}
+/**/
+  /**/
+  /**/
+}
+
+/* line 34, src/sass/components/sections/_work-sample.scss */
+.work-sample .col-tablet-wide-5 a h1 {
+  font-family: "Muli-SemiBold", sans-serif;
+  font-size: 62px;
+  font-size: 3.875rem;
+}
+
+/* line 43, src/sass/components/sections/_work-sample.scss */
+.work-sample .col-tablet-wide-5 a ul {
+  font-family: "Muli-ExtraBold", sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-top: 28px;
+  margin-top: 1.75rem;
+}
+
+/* line 50, src/sass/components/sections/_work-sample.scss */
+.work-sample .col-tablet-wide-5 a ul:before {
+  content: "\2014\00a0\00a0\00a0";
+}
+
+/* line 56, src/sass/components/sections/_work-sample.scss */
+.work-sample .col-tablet-wide-5 a ul li {
+  background-color: rgba(0, 255, 0, 0.3);
+  display: inline-block;
+}
+
+/* line 61, src/sass/components/sections/_work-sample.scss */
+.work-sample .col-tablet-wide-5 a ul li:not(:last-child):after {
+  content: "\002C";
+}
+
+/* line 71, src/sass/components/sections/_work-sample.scss */
+.work-sample .col-tablet-wide-5 a h4 {
+  background-color: rgba(255, 0, 0, 0.2);
+  font-family: "Muli-SemiBold", sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  margin-top: 28px;
+  margin-top: 1.75rem;
+  /**/
+  /**/
+}
+
+/* line 82, src/sass/components/sections/_work-sample.scss */
+.work-sample .col-tablet-wide-5 a h4:after {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: transparent;
+  content: "\f101";
+  font-family: icons;
+  font-size: 26px;
+  font-size: 1.625rem;
+  position: absolute;
+  display: block;
+  margin-top: 3%;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+/* line 162, src/sass/components/sections/_work-sample.scss */
+.work-sample .col-tablet-wide-5 a.arrow h4:after {
+  color: red;
+}
+
+/* line 169, src/sass/components/sections/_work-sample.scss */
+.work-sample .col-tablet-wide-5 a.arrow.animated h4:after {
+  -webkit-animation: arrow-right 0.8s ease-in-out 1 0.1s;
+  animation: arrow-right 0.8s ease-in-out 1 0.1s;
+}
+
+@-webkit-keyframes arrow-right {
+  0%, 100% {
+    margin-left: 0%;
+  }
+  50% {
+    margin-left: 6%;
+  }
+}
+
+@keyframes arrow-right {
+  0%, 100% {
+    margin-left: 0%;
+  }
+  50% {
+    margin-left: 6%;
+  }
+}
+
+/* line 202, src/sass/components/sections/_work-sample.scss */
+.work-sample .col-tablet-wide-7 {
+  position: absolute;
+  bottom: 0;
+}
+
+/* line 219, src/sass/components/sections/_work-sample.scss */
+.work-sample .col-tablet-wide-7:last-child {
+  right: 0;
+}
+
+/* line 224, src/sass/components/sections/_work-sample.scss */
+.work-sample .col-tablet-wide-7 img {
+  background-color: rgba(255, 0, 0, 0.3);
+  vertical-align: top;
+  width: 92%;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,16 @@
+/* line 3, src/sass/style-ie.scss */
+body {
+  behavior: url(display-table.min.htc);
+}
+
+/* line 7, src/sass/style-ie.scss */
+.row.equal-width {
+  -dt-display: table;
+}
+
+/* line 10, src/sass/style-ie.scss */
+.row.equal-width .col {
+  -dt-display: table-cell;
+}
+
+/*# sourceMappingURL=style-ie.css.map */
