@@ -1,23 +1,79 @@
 /*************************** Work Sample Section Styles ****************************/
 
+/*
+.example {
+	display: flex;
+	flex-direction: column;
+}
+
+.example > .a {order: 3; }
+.example > .b {order: 2; }
+.example > .c {order: 1; }
+*/
+
+/*
+.example {
+//	display: table;
+//	width: 100%;
+}
+*/
+
+//.example > .a {display: table-footer-group; } /* Will be displayed at the bottom of the pseudo-table */
+////.example > .b {display: table-row-group;    } /* Will be displayed in the middle */
+//.example > .c {display: table-header-group; } /* Will be displayed at the top */
+
+//.a {display: table-footer-group; }
+//.c {display: table-header-group; }
+//
+//
+//.col-tablet-wide-3 {float: none; display: table-footer-group;}
+//.col-tablet-wide-4 {float: none; display: table-header-group;}
+
+
 
 .work-sample {
 
 //	background-color: rgba(255,255,0,0.2);
+	
+	display: table;
+////	table-layout: fixed;
+//
+	width: 100%;
 
 
 	position: relative;
 
 	@include box-sizing(border-box);
+	
+/**
+	display: flex;
+	flex-direction: column;
+/**/
+	
 
+	
 
 	.col-tablet-wide-5 {
 
 //		padding: 12% 10% 12% 5.5%;
-		padding: 12% 3%;
-
-		&:last-child {
-			margin-left: 58.33333%; // <-- Desktop
+		
+		
+		
+		@include media('screen', '<tablet-wide') {
+			float: none;
+			display: table-header-group;
+		}
+		
+		
+		
+		@include media('screen', '>=tablet-wide') {
+			
+			padding: 12% 3%;
+			
+			&:last-child {
+				margin-left: 58.33333%;
+			}
+			
 		}
 
 
@@ -77,8 +133,8 @@
 				@include rem(line-height, 24px);
 
 				@include rem(margin-top, 28px);
-
-/**/
+				
+				
 				&:after {
 					background-color: rgba(255,0,0,0.2);
 					
@@ -95,67 +151,9 @@
 					
 					@include transition(all 0.4s ease-in-out);
 				}
-/**/
 
 			}
-
-/**
-			.icon-arrow-right {
-				background-color: rgba(0,255,0,0.2);
-				
-//				color: transparent;
-				
-				@include rem(font-size, 26px);
-				
-				position: absolute;
-				margin-top: 3%;
-//				margin-left: 5%;
-			}
-/**/
 			
-			
-/**
-			&:hover {
-				h4 {
-					&:after {
-						color: red;
-	//					margin-left: 5%;
-					}
-				}
-			}
-/**/
-			
-/**
-			&.animated {
-				h4 {
-					&:after {
-//						margin-left: 5%;
-						
-						@-webkit-keyframes arrow-right {
-							0%, 100% {
-								margin-left: 0%;
-							}
-							50% {
-								margin-left: 5%;
-							}
-						}
-						@keyframes arrow-right {
-							0%, 100% {
-								margin-left: 0%;
-							}
-							50% {
-								margin-left: 5%;
-							}
-						}
-						-webkit-animation: arrow-right 0.8s ease-in-out 1 0.1s;
-						animation: arrow-right 0.8s ease-in-out 1 0.1s;
-						
-					}
-				}
-			}
-/**/
-			
-/**/
 			&.arrow {
 
 				h4 {
@@ -191,7 +189,6 @@
 
 
 			}
-/**/
 		
 		}
 
@@ -200,24 +197,26 @@
 
 
 	.col-tablet-wide-7 {
-
-//		display: table-cell;
-//		vertical-align: middle;
-
-
-//		display: table-cell;
-//		text-align: center;
-//		vertical-align: middle;
-
-//		position: relative;
-//		top: 50%;
-
-		position: absolute;
-		bottom: 0;
-
-
-		&:last-child {
-			right: 0; // <-- Desktop
+		
+/**
+		order: 1;
+/**/
+//		display: table-header-group;
+		
+		@include media('screen', '<tablet-wide') {
+			float: none;
+			display: table-footer-group;
+		}
+		
+		
+		@include media('screen', '>=tablet-wide') {
+			
+			position: absolute;
+			bottom: 0;
+			
+			&:last-child {
+				right: 0;
+			}
 		}
 
 

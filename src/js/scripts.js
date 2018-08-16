@@ -78,7 +78,7 @@ $(window).on("load", function() {
 /**/
 	$(".work-sample a").mouseover(function() {
 
-		console.log("over");
+//		console.log("over");
 
         var workSample = $(this);
 
@@ -86,25 +86,23 @@ $(window).on("load", function() {
 
 		if (! workSample.hasClass("arrow")) {
 
-            console.log("over arrow animated");
+ //           console.log("over arrow animated");
 
             workSample.addClass("arrow animated");
 
             var interval = setInterval(function () {
                 clearInterval(interval);
 
-                console.log("over animated END");
+ //               console.log("over animated END");
 
                 workSample.removeClass("animated");
 
                 if (workSample.attr("data-mouseover") === "false") {
 
-                    console.log("over arrow END");
+ //                   console.log("over arrow END");
 
                     workSample.removeClass("arrow");
 				}
-
-
 
 			}, 900);
 
@@ -112,76 +110,16 @@ $(window).on("load", function() {
 
 	}).mouseleave(function() {
 
-        console.log("out");
-
-     //   var workSample = $(this);
+//        console.log("out");
 
         $(this).attr("data-mouseover", "false");
-
 
         if (! $(this).hasClass("animated")) {
             $(this).removeClass("arrow animated");
 		}
 
-//        if (workSample.hasClass("arrow")) {
-//
-//		}
 
 	});
-/**/
-
-
-
-
- /**
-     $(".work-sample a").mouseover(function() {
-
-     	console.log("over");
-
-        var workSample = $(this);
-
-        if (workSample.attr("data-mouseover") !== "true") {
-
-            if (! workSample.hasClass("animated")) {
-
-                console.log("over animated");
-
-                workSample.addClass("animated");
-
-                var interval = setInterval(function () {
-                    clearInterval(interval);
-
-                    console.log("over animated END");
-
-                    workSample.removeClass("animated");
-                }, 900);
-
-            }
-		}
-
-	}).mouseleave(function() {
-
-        console.log("out");
-
-     //   var workSample = $(this);
-
-        $(this).attr("data-mouseover", "false");
-
-
-        if (! $(this).hasClass("animated")) {
-            $(this).removeClass("animated");
-		}
-
-//        if (workSample.hasClass("arrow")) {
-//
-//		}
-
-	});
-/**/
-
-
-
-
 
 
 
