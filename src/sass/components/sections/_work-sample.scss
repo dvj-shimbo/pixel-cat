@@ -1,7 +1,29 @@
 /*************************** Work Sample Section Styles ****************************/
 
 
+@mixin work-sample-padding ($media-min, $media-max, $padding-min, $padding-max) {
+	$d: ($padding-max - $padding-min) / 1px;
+	@for $i from 0 through $d {
+		$step: ($media-max - $media-min) / ($d + 1);
+		$min: $i * $step + $media-min;
+		$max: $min + $step;
+		@include media('>=' + round($min), '<' + round($max)) {
+			$padding: $i + $padding-min;
+			
+			@include rem(padding, $padding * 2 $padding);
+			
+//			&:first-child {
+//				@include rem(padding, $padding $padding $padding 0);
+//			}
+//
+//			&:last-child {
+//				@include rem(padding, $padding 0 $padding $padding);
+//			}
+			
 
+		}
+	}
+}
 
 
 
@@ -25,6 +47,41 @@
 
 
 
+@mixin work-sample-ul ($media-min, $media-max, $font-size-min, $font-size-max) {
+	$d: ($font-size-max - $font-size-min) / 1px;
+	@for $i from 0 through $d {
+		$step: ($media-max - $media-min) / ($d + 1);
+		$min: $i * $step + $media-min;
+		$max: $min + $step;
+		@include media('>=' + round($min), '<' + round($max)) {
+			$font-size: $i + $font-size-min;
+			@include rem(font-size, $font-size);
+			@include rem(line-height, round($font-size * 1.286));
+			@include rem(margin-top, $font-size * 2);
+			
+		}
+	}
+}
+
+
+@mixin work-sample-h4 ($media-min, $media-max, $font-size-min, $font-size-max) {
+	$d: ($font-size-max - $font-size-min) / 1px;
+	@for $i from 0 through $d {
+		$step: ($media-max - $media-min) / ($d + 1);
+		$min: $i * $step + $media-min;
+		$max: $min + $step;
+		@include media('>=' + round($min), '<' + round($max)) {
+			$font-size: $i + $font-size-min;
+			@include rem(font-size, $font-size);
+			@include rem(line-height, round($font-size * 1.5));
+			@include rem(margin-top, round($font-size * 1.75));
+		
+		}
+	}
+}
+
+
+
 
 
 
@@ -34,228 +91,311 @@
 
 .work-sample {
 
-//	background-color: rgba(255,255,0,0.2);
+	background-color: rgba(0,255,0,0.1);
 	
-	display: table;
-////	table-layout: fixed;
-//
-	width: 100%;
+//	display: table;
+//	width: 100%;
 
 
-	position: relative;
-
-	@include box-sizing(border-box);
-	
-/**
-	display: flex;
-	flex-direction: column;
-/**/
+//	position: relative;
+//	overflow: hidden;
+//	@include box-sizing(border-box);
 	
 
 	
-
-	.col-tablet-wide-5 {
-
-//		padding: 12% 10% 12% 5.5%;
+	.row {
+		position: relative;
+		overflow: hidden;
+		margin: 0 auto;
+		@include box-sizing(border-box);
+		@include rem(max-width, 2100px);
 		
-		
-		
-		@include media('screen', '<tablet-wide') {
-			float: none;
-			display: table-header-group;
-		}
-		
-		
-		
-		@include media('screen', '>=tablet-wide') {
+		.col-tablet-wide-5 {
 			
-			padding: 12% 3%;
+//			padding: 12% 10% 12% 5.5%;
 			
-			&:last-child {
-				margin-left: 58.33333%;
+			
+			
+			
+			
+			@include media('screen', '<1024px') {
+				float: none;
+				display: table-header-group;
 			}
 			
-		}
-
-
-		a {
-
-			background-color: rgba(255,255,0,0.3);
 			
-			display: block;
-			text-decoration: none;
-
-			width: 78%;
-			@include rem(max-width, 700px);
-
 			
-//			@include rem(margin, 162px 72px);
-
-			h1 {
-				
-				
-
-				font-family: "Muli-SemiBold", sans-serif;
-
-//				@include rem(font-size, 62px);
-
-//				@include work-sample-font-size (1024px, 2100px, 58px, 118px, 5.67vw);
-				@include work-sample-font-size (1024px, 2100px, 58px, 118px);
-				
-				@include media('screen', '>=2100px') {
-//					@include rem(margin, 0 68px 39px);
-					@include rem(font-size, 119px);
-				}
 			
-			}
-
-
-			ul {
-				font-family: "Muli-ExtraBold", sans-serif;
+			
+			@include media('screen', '>=1024px') {
 				
-				/*!*/
-
-//				@include rem(font-size, 14px);
-//				@include work-sample-font-size (1024px, 2100px, 10px, 19px);
-				@include work-sample-font-size (1024px, 2100px, 12px, 19px);
+//				padding: 12% 3%;
+//				padding: 12% 10.8% 12% 0;
+//				padding: 12% 6%;
 				
-				@include media('screen', '>=2100px') {
-					@include rem(font-size, 20px);
-				}
-
-				@include rem(margin-top, 28px);
-
-				&:before {
-//					content: "\2014\2014\00a0\00a0\00a0";
-//					content: "\00a0\2014\00a0\00a0\00a0";
-					content: "\2014\00a0\00a0\00a0";
-				}
-
-				li {
-					background-color: rgba(0,255,0,0.3);
-					display: inline-block;
-
-					&:not(:last-child) {
-						&:after {
-//							content: "\002C\00a0";
-							content: "\002C";
-						}
+//				@include rem(padding, 0 110px);
+				
+				
+				&:first-child {
+					a {
+						float: right;
 					}
-
-
 				}
+				
+				&:last-child {
+					margin-left: 58.33333%;
+				}
+				
 			}
-
-			h4 {
-				background-color: rgba(255,0,0,0.2);
-
-				font-family: "Muli-SemiBold", sans-serif;
-
-//				@include rem(font-size, 16px);
-				@include rem(line-height, 24px);
-
-				@include rem(margin-top, 28px);
+			
+			
+			
+			
+			@include work-sample-padding (1024px, 2100px, 62px, 125px);
+			
+			
+//			@include work-sample-padding (1024px, 2100px, 110px, 229px);
+			
+			@include media('screen', '>=2100px') {
+//				@include rem(padding, 230px 230px 230px 0);
+				@include rem(padding, 252px 126px);
+			}
+			
+			
+			a {
 				
-				@include work-sample-font-size (1024px, 2100px, 14px, 23px);
+				background-color: rgba(255,255,0,0.3);
 				
-				@include media('screen', '>=2100px') {
-					@include rem(font-size, 24px);
+				
+				
+				display: block;
+				text-decoration: none;
+				
+//				width: 78%;
+
+//				@include rem(max-width, 700px);
+				
+				
+				
+				
+				@include media('screen', '>=1024px') {
+					
+//					width: 90%;
+//					@include rem(max-width, 580px);
+					@include rem(max-width, 620px);
+//					float: right;
+					
 				}
 				
 				
-				&:after {
+				
+				
+				//			@include rem(margin, 162px 72px);
+				
+				h1 {
+					
+					
+					
+					font-family: "Muli-SemiBold", sans-serif;
+					
+//					@include rem(font-size, 62px);
+
+//					@include work-sample-font-size (1024px, 2100px, 58px, 118px, 5.67vw);
+					@include work-sample-font-size (1024px, 2100px, 58px, 118px);
+					
+					@include media('screen', '>=2100px') {
+//					@include rem(margin, 0 68px 39px);
+						@include rem(font-size, 119px);
+					}
+					
+				}
+				
+				
+				ul {
+					font-family: "Muli-ExtraBold", sans-serif;
+					
+					
+					
+//					@include rem(font-size, 14px);
+//					@include rem(line-height, 18px);
+/**/
+//					@include work-sample-font-size (1024px, 2100px, 10px, 19px);
+					@include work-sample-ul (1024px, 2100px, 12px, 19px);
+					
+					@include media('screen', '>=2100px') {
+						@include rem(font-size, 20px);
+						@include rem(line-height, 26px);
+						@include rem(margin-top, 40px);
+					}
+/**/
+//					@include rem(margin-top, 28px);
+					
+					&:before {
+//						content: "\2014\2014\00a0\00a0\00a0";
+//						content: "\00a0\2014\00a0\00a0\00a0";
+						content: "\2014\00a0\00a0\00a0";
+					}
+					
+					li {
+						background-color: rgba(0,255,0,0.3);
+						display: inline-block;
+						
+						&:not(:last-child) {
+							&:after {
+//								content: "\002C\00a0";
+								content: "\002C";
+							}
+						}
+						
+						
+					}
+				}
+				
+				h4 {
 					background-color: rgba(255,0,0,0.2);
 					
-					color: transparent;
+					font-family: "Muli-SemiBold", sans-serif;
 					
-					content: "\f101";
-					font-family: icons;
-					@include rem(font-size, 26px);
+//					@include rem(font-size, 16px);
+//					@include rem(line-height, 24px);
+//					@include rem(margin-top, 28px);
 					
-					position: absolute;
-					display: block;
-					margin-top: 3%;
-	//				margin-left: 5%;
+					@include work-sample-h4 (1024px, 2100px, 14px, 23px);
 					
-					@include transition(all 0.4s ease-in-out);
+					@include media('screen', '>=2100px') {
+						@include rem(font-size, 24px);
+						@include rem(line-height, 36px);
+						@include rem(margin-top, 42px);
+					}
+					
+					@include media('screen', '>=1024px') {
+						&:after {
+//							background-color: rgba(255,0,0,0.2);
+
+//							color: transparent;
+							opacity: 0;
+							
+							content: "\f101";
+							font-family: icons;
+							
+							
+							position: absolute;
+							display: block;
+							margin-top: 3%;
+//							margin-left: 5%;
+							
+							@include transition(all 0.4s ease-in-out);
+							
+//							@include rem(font-size, 26px);
+							
+							@include work-sample-font-size (1024px, 2100px, 22px, 35px);
+							
+							@include media('screen', '>=2100px') {
+								@include rem(font-size, 36px);
+							}
+							
+						}
+					}
+					
+					
 				}
-
-			}
-			
-			&.arrow {
-
-				h4 {
-					&:after {
-						color: red;
+				
+				
+				@include media('screen', '>=1024px') {
+					&.arrow {
+						
+						h4 {
+							&:after {
+//								color: red;
+								opacity: 1;
+							}
+						}
+						
+						&.animated {
+							h4 {
+								&:after {
+									@-webkit-keyframes arrow-right {
+										0%, 100% {
+											margin-left: 0;
+										}
+										50% {
+											margin-left: 6%;
+										}
+									}
+									@keyframes arrow-right {
+										0%, 100% {
+											margin-left: 0;
+										}
+										50% {
+											margin-left: 6%;
+										}
+									}
+									-webkit-animation: arrow-right 0.8s ease-in-out 1 0.1s;
+									animation: arrow-right 0.8s ease-in-out 1 0.1s;
+								}
+							}
+						}
+						
+						
 					}
 				}
-
-				&.animated {
-					h4 {
-						 &:after {
-							 @-webkit-keyframes arrow-right {
-								 0%, 100% {
-									 margin-left: 0;
-								 }
-								 50% {
-									 margin-left: 6%;
-								 }
-							 }
-							 @keyframes arrow-right {
-								 0%, 100% {
-									 margin-left: 0;
-								 }
-								 50% {
-									 margin-left: 6%;
-								 }
-							 }
-							 -webkit-animation: arrow-right 0.8s ease-in-out 1 0.1s;
-							 animation: arrow-right 0.8s ease-in-out 1 0.1s;
-						 }
-					 }
-				}
-
-
+				
+				
+				
 			}
-		
+			
 		}
-
-	}
-
-
-
-	.col-tablet-wide-7 {
 		
+		
+		
+		.col-tablet-wide-7 {
+			
 /**
-		order: 1;
+			order: 1;
 /**/
-//		display: table-header-group;
-		
-		@include media('screen', '<tablet-wide') {
-			float: none;
-			display: table-footer-group;
-		}
-		
-		
-		@include media('screen', '>=tablet-wide') {
+//			display: table-header-group;
 			
-			position: absolute;
-			bottom: 0;
+			@include media('screen', '<1024px') {
+				float: none;
+				display: table-footer-group;
+			}
 			
-			&:last-child {
-				right: 0;
+			
+			@include media('screen', '>=1024px') {
+				
+				position: absolute;
+				bottom: 0;
+				
+				&:first-child {
+					img {
+						float: right;
+					}
+				}
+				
+				&:last-child {
+					right: 0;
+				}
+			}
+			
+			
+			img {
+				background-color: rgba(255,0,0,0.3);
+				
+				vertical-align: top;
+//				width: 92%;
+				width: 90%;
+//				width: 89.45%;
+//				@include rem(max-width, 1125px);
+				@include rem(max-width, 1100px);
+				
 			}
 		}
-
-
-		img {
-			background-color: rgba(255,0,0,0.3);
-
-			vertical-align: top;
-			width: 92%;
-
-		}
+		
+		
 	}
+	
+
+
 
 
 
