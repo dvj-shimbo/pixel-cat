@@ -1,33 +1,34 @@
 /*************************** Work Sample Section Styles ****************************/
 
-/*
-.example {
-	display: flex;
-	flex-direction: column;
+
+
+
+
+
+//@mixin work-sample-font-size ($media-min, $media-max, $font-size-min, $font-size-max, $font-size-vw) {
+@mixin work-sample-font-size ($media-min, $media-max, $font-size-min, $font-size-max) {
+	$d: ($font-size-max - $font-size-min) / 1px;
+	@for $i from 0 through $d {
+		$step: ($media-max - $media-min) / ($d + 1);
+		$min: $i * $step + $media-min;
+		$max: $min + $step;
+		@include media('>=' + round($min), '<' + round($max)) {
+			$font-size: $i + $font-size-min;
+			@include rem(font-size, $font-size);
+			
+//			font-size: $font-size-vw;
+		
+		}
+	}
 }
 
-.example > .a {order: 3; }
-.example > .b {order: 2; }
-.example > .c {order: 1; }
-*/
 
-/*
-.example {
-//	display: table;
-//	width: 100%;
-}
-*/
 
-//.example > .a {display: table-footer-group; } /* Will be displayed at the bottom of the pseudo-table */
-////.example > .b {display: table-row-group;    } /* Will be displayed in the middle */
-//.example > .c {display: table-header-group; } /* Will be displayed at the top */
 
-//.a {display: table-footer-group; }
-//.c {display: table-header-group; }
-//
-//
-//.col-tablet-wide-3 {float: none; display: table-footer-group;}
-//.col-tablet-wide-4 {float: none; display: table-header-group;}
+
+
+
+
 
 
 
@@ -80,26 +81,47 @@
 		a {
 
 			background-color: rgba(255,255,0,0.3);
-
-			width: 78%;
-
+			
 			display: block;
 			text-decoration: none;
+
+			width: 78%;
+			@include rem(max-width, 700px);
+
+			
 //			@include rem(margin, 162px 72px);
 
 			h1 {
+				
+				
 
 				font-family: "Muli-SemiBold", sans-serif;
 
-				@include rem(font-size, 62px);
-//				font-weight: bold;
+//				@include rem(font-size, 62px);
+
+//				@include work-sample-font-size (1024px, 2100px, 58px, 118px, 5.67vw);
+				@include work-sample-font-size (1024px, 2100px, 58px, 118px);
+				
+				@include media('screen', '>=2100px') {
+//					@include rem(margin, 0 68px 39px);
+					@include rem(font-size, 119px);
+				}
+			
 			}
 
 
 			ul {
 				font-family: "Muli-ExtraBold", sans-serif;
+				
+				/*!*/
 
-				@include rem(font-size, 14px);
+//				@include rem(font-size, 14px);
+//				@include work-sample-font-size (1024px, 2100px, 10px, 19px);
+				@include work-sample-font-size (1024px, 2100px, 12px, 19px);
+				
+				@include media('screen', '>=2100px') {
+					@include rem(font-size, 20px);
+				}
 
 				@include rem(margin-top, 28px);
 
@@ -129,10 +151,16 @@
 
 				font-family: "Muli-SemiBold", sans-serif;
 
-				@include rem(font-size, 16px);
+//				@include rem(font-size, 16px);
 				@include rem(line-height, 24px);
 
 				@include rem(margin-top, 28px);
+				
+				@include work-sample-font-size (1024px, 2100px, 14px, 23px);
+				
+				@include media('screen', '>=2100px') {
+					@include rem(font-size, 24px);
+				}
 				
 				
 				&:after {
@@ -167,7 +195,7 @@
 						 &:after {
 							 @-webkit-keyframes arrow-right {
 								 0%, 100% {
-									 margin-left: 0%;
+									 margin-left: 0;
 								 }
 								 50% {
 									 margin-left: 6%;
@@ -175,7 +203,7 @@
 							 }
 							 @keyframes arrow-right {
 								 0%, 100% {
-									 margin-left: 0%;
+									 margin-left: 0;
 								 }
 								 50% {
 									 margin-left: 6%;

@@ -202,10 +202,10 @@ body {
   /**
 //  background-image: url(../img/dev/Main-Page_2560_2_a.png);
 
-	background-image: url(../img/dev/Main-Page_1366x768_2_a.png);
+//	background-image: url(../img/dev/Main-Page_1366x768_2_a.png);
 //	background-position: 30px 0;
 
-//  background-image: url(../img/dev/Main-Page_tablet-768x1024_2_a.png);
+  background-image: url(../img/dev/Main-Page_tablet-768x1024_2_a.png);
 //  background-image: url(../img/dev/Main-Page_tablet-768x1024_2_a.png);
 // background-image: url(../img/dev/Main-Page_mobile-360x640_2_a.png);
 
@@ -223,28 +223,13 @@ i, em {
   font-style: italic;
 }
 
-/**
-img {
-
-	// https://stackoverflow.com/questions/9945363/image-scaling-causes-poor-quality-in-firefox-internet-explorer-but-not-chrome?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
-	// applies to GIF and PNG images; avoids blurry edges
-    image-rendering: -moz-crisp-edges;         // Firefox 
-    image-rendering:   -o-crisp-edges;         // Opera 
-    image-rendering: -webkit-optimize-contrast;// Webkit (non-standard naming) 
-    image-rendering: crisp-edges;
-    -ms-interpolation-mode: bicubic;           // IE (non-standard property) 
- //    -ms-interpolation-mode: nearest-neighbor;
-
- 	width: 100%;
-}
 /**/
-/**/
-/* line 96, src/sass/common/_base.scss */
+/* line 81, src/sass/common/_base.scss */
 .row {
   border: solid 1px red;
 }
 
-/* line 107, src/sass/common/_base.scss */
+/* line 92, src/sass/common/_base.scss */
 [class*="col"] {
   border: solid 1px blue;
 }
@@ -773,23 +758,7 @@ img {
 }
 
 /*************************** Work Sample Section Styles ****************************/
-/*
-.example {
-	display: flex;
-	flex-direction: column;
-}
-
-.example > .a {order: 3; }
-.example > .b {order: 2; }
-.example > .c {order: 1; }
-*/
-/*
-.example {
-//	display: table;
-//	width: 100%;
-}
-*/
-/* line 34, src/sass/components/sections/_work-sample.scss */
+/* line 35, src/sass/components/sections/_work-sample.scss */
 .work-sample {
   display: table;
   width: 100%;
@@ -804,7 +773,7 @@ img {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 56, src/sass/components/sections/_work-sample.scss */
+  /* line 57, src/sass/components/sections/_work-sample.scss */
   .work-sample .col-tablet-wide-5 {
     float: none;
     display: table-header-group;
@@ -812,69 +781,722 @@ img {
 }
 
 @media screen and (min-width: 1024px) {
-  /* line 56, src/sass/components/sections/_work-sample.scss */
+  /* line 57, src/sass/components/sections/_work-sample.scss */
   .work-sample .col-tablet-wide-5 {
     padding: 12% 3%;
   }
-  /* line 73, src/sass/components/sections/_work-sample.scss */
+  /* line 74, src/sass/components/sections/_work-sample.scss */
   .work-sample .col-tablet-wide-5:last-child {
     margin-left: 58.33333%;
   }
 }
 
-/* line 80, src/sass/components/sections/_work-sample.scss */
+/* line 81, src/sass/components/sections/_work-sample.scss */
 .work-sample .col-tablet-wide-5 a {
   background-color: rgba(255, 255, 0, 0.3);
-  width: 78%;
   display: block;
   text-decoration: none;
+  width: 78%;
+  max-width: 700px;
+  max-width: 43.75rem;
 }
 
-/* line 90, src/sass/components/sections/_work-sample.scss */
+/* line 94, src/sass/components/sections/_work-sample.scss */
 .work-sample .col-tablet-wide-5 a h1 {
   font-family: "Muli-SemiBold", sans-serif;
-  font-size: 62px;
-  font-size: 3.875rem;
 }
 
-/* line 99, src/sass/components/sections/_work-sample.scss */
+@media (min-width: 1024px) and (max-width: 1041px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 58px;
+    font-size: 3.625rem;
+  }
+}
+
+@media (min-width: 1042px) and (max-width: 1058px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 59px;
+    font-size: 3.6875rem;
+  }
+}
+
+@media (min-width: 1059px) and (max-width: 1076px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 60px;
+    font-size: 3.75rem;
+  }
+}
+
+@media (min-width: 1077px) and (max-width: 1094px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 61px;
+    font-size: 3.8125rem;
+  }
+}
+
+@media (min-width: 1095px) and (max-width: 1111px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 62px;
+    font-size: 3.875rem;
+  }
+}
+
+@media (min-width: 1112px) and (max-width: 1129px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 63px;
+    font-size: 3.9375rem;
+  }
+}
+
+@media (min-width: 1130px) and (max-width: 1146px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 64px;
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1147px) and (max-width: 1164px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 65px;
+    font-size: 4.0625rem;
+  }
+}
+
+@media (min-width: 1165px) and (max-width: 1182px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 66px;
+    font-size: 4.125rem;
+  }
+}
+
+@media (min-width: 1183px) and (max-width: 1199px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 67px;
+    font-size: 4.1875rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1217px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 68px;
+    font-size: 4.25rem;
+  }
+}
+
+@media (min-width: 1218px) and (max-width: 1235px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 69px;
+    font-size: 4.3125rem;
+  }
+}
+
+@media (min-width: 1236px) and (max-width: 1252px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 70px;
+    font-size: 4.375rem;
+  }
+}
+
+@media (min-width: 1253px) and (max-width: 1270px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 71px;
+    font-size: 4.4375rem;
+  }
+}
+
+@media (min-width: 1271px) and (max-width: 1288px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 72px;
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1289px) and (max-width: 1305px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 73px;
+    font-size: 4.5625rem;
+  }
+}
+
+@media (min-width: 1306px) and (max-width: 1323px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 74px;
+    font-size: 4.625rem;
+  }
+}
+
+@media (min-width: 1324px) and (max-width: 1341px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 75px;
+    font-size: 4.6875rem;
+  }
+}
+
+@media (min-width: 1342px) and (max-width: 1358px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 76px;
+    font-size: 4.75rem;
+  }
+}
+
+@media (min-width: 1359px) and (max-width: 1376px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 77px;
+    font-size: 4.8125rem;
+  }
+}
+
+@media (min-width: 1377px) and (max-width: 1393px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 78px;
+    font-size: 4.875rem;
+  }
+}
+
+@media (min-width: 1394px) and (max-width: 1411px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 79px;
+    font-size: 4.9375rem;
+  }
+}
+
+@media (min-width: 1412px) and (max-width: 1429px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 80px;
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1430px) and (max-width: 1446px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 81px;
+    font-size: 5.0625rem;
+  }
+}
+
+@media (min-width: 1447px) and (max-width: 1464px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 82px;
+    font-size: 5.125rem;
+  }
+}
+
+@media (min-width: 1465px) and (max-width: 1482px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 83px;
+    font-size: 5.1875rem;
+  }
+}
+
+@media (min-width: 1483px) and (max-width: 1499px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 84px;
+    font-size: 5.25rem;
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 1517px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 85px;
+    font-size: 5.3125rem;
+  }
+}
+
+@media (min-width: 1518px) and (max-width: 1535px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 86px;
+    font-size: 5.375rem;
+  }
+}
+
+@media (min-width: 1536px) and (max-width: 1552px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 87px;
+    font-size: 5.4375rem;
+  }
+}
+
+@media (min-width: 1553px) and (max-width: 1570px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 88px;
+    font-size: 5.5rem;
+  }
+}
+
+@media (min-width: 1571px) and (max-width: 1587px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 89px;
+    font-size: 5.5625rem;
+  }
+}
+
+@media (min-width: 1588px) and (max-width: 1605px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 90px;
+    font-size: 5.625rem;
+  }
+}
+
+@media (min-width: 1606px) and (max-width: 1623px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 91px;
+    font-size: 5.6875rem;
+  }
+}
+
+@media (min-width: 1624px) and (max-width: 1640px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 92px;
+    font-size: 5.75rem;
+  }
+}
+
+@media (min-width: 1641px) and (max-width: 1658px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 93px;
+    font-size: 5.8125rem;
+  }
+}
+
+@media (min-width: 1659px) and (max-width: 1676px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 94px;
+    font-size: 5.875rem;
+  }
+}
+
+@media (min-width: 1677px) and (max-width: 1693px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 95px;
+    font-size: 5.9375rem;
+  }
+}
+
+@media (min-width: 1694px) and (max-width: 1711px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 96px;
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 1712px) and (max-width: 1729px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 97px;
+    font-size: 6.0625rem;
+  }
+}
+
+@media (min-width: 1730px) and (max-width: 1746px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 98px;
+    font-size: 6.125rem;
+  }
+}
+
+@media (min-width: 1747px) and (max-width: 1764px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 99px;
+    font-size: 6.1875rem;
+  }
+}
+
+@media (min-width: 1765px) and (max-width: 1781px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 100px;
+    font-size: 6.25rem;
+  }
+}
+
+@media (min-width: 1782px) and (max-width: 1799px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 101px;
+    font-size: 6.3125rem;
+  }
+}
+
+@media (min-width: 1800px) and (max-width: 1817px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 102px;
+    font-size: 6.375rem;
+  }
+}
+
+@media (min-width: 1818px) and (max-width: 1834px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 103px;
+    font-size: 6.4375rem;
+  }
+}
+
+@media (min-width: 1835px) and (max-width: 1852px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 104px;
+    font-size: 6.5rem;
+  }
+}
+
+@media (min-width: 1853px) and (max-width: 1870px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 105px;
+    font-size: 6.5625rem;
+  }
+}
+
+@media (min-width: 1871px) and (max-width: 1887px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 106px;
+    font-size: 6.625rem;
+  }
+}
+
+@media (min-width: 1888px) and (max-width: 1905px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 107px;
+    font-size: 6.6875rem;
+  }
+}
+
+@media (min-width: 1906px) and (max-width: 1923px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 108px;
+    font-size: 6.75rem;
+  }
+}
+
+@media (min-width: 1924px) and (max-width: 1940px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 109px;
+    font-size: 6.8125rem;
+  }
+}
+
+@media (min-width: 1941px) and (max-width: 1958px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 110px;
+    font-size: 6.875rem;
+  }
+}
+
+@media (min-width: 1959px) and (max-width: 1976px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 111px;
+    font-size: 6.9375rem;
+  }
+}
+
+@media (min-width: 1977px) and (max-width: 1993px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 112px;
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 1994px) and (max-width: 2011px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 113px;
+    font-size: 7.0625rem;
+  }
+}
+
+@media (min-width: 2012px) and (max-width: 2028px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 114px;
+    font-size: 7.125rem;
+  }
+}
+
+@media (min-width: 2029px) and (max-width: 2046px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 115px;
+    font-size: 7.1875rem;
+  }
+}
+
+@media (min-width: 2047px) and (max-width: 2064px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 116px;
+    font-size: 7.25rem;
+  }
+}
+
+@media (min-width: 2065px) and (max-width: 2081px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 117px;
+    font-size: 7.3125rem;
+  }
+}
+
+@media (min-width: 2082px) and (max-width: 2099px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 118px;
+    font-size: 7.375rem;
+  }
+}
+
+@media screen and (min-width: 2100px) {
+  /* line 94, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h1 {
+    font-size: 119px;
+    font-size: 7.4375rem;
+  }
+}
+
+/* line 113, src/sass/components/sections/_work-sample.scss */
 .work-sample .col-tablet-wide-5 a ul {
   font-family: "Muli-ExtraBold", sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  /*!*/
   margin-top: 28px;
   margin-top: 1.75rem;
 }
 
-/* line 106, src/sass/components/sections/_work-sample.scss */
+@media (min-width: 1024px) and (max-width: 1158px) {
+  /* line 113, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a ul {
+    font-size: 12px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 1159px) and (max-width: 1292px) {
+  /* line 113, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a ul {
+    font-size: 13px;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (min-width: 1293px) and (max-width: 1427px) {
+  /* line 113, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a ul {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 1428px) and (max-width: 1561px) {
+  /* line 113, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a ul {
+    font-size: 15px;
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 1562px) and (max-width: 1696px) {
+  /* line 113, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a ul {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1697px) and (max-width: 1830px) {
+  /* line 113, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a ul {
+    font-size: 17px;
+    font-size: 1.0625rem;
+  }
+}
+
+@media (min-width: 1831px) and (max-width: 1965px) {
+  /* line 113, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a ul {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1966px) and (max-width: 2099px) {
+  /* line 113, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a ul {
+    font-size: 19px;
+    font-size: 1.1875rem;
+  }
+}
+
+@media screen and (min-width: 2100px) {
+  /* line 113, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a ul {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
+
+/* line 128, src/sass/components/sections/_work-sample.scss */
 .work-sample .col-tablet-wide-5 a ul:before {
   content: "\2014\00a0\00a0\00a0";
 }
 
-/* line 112, src/sass/components/sections/_work-sample.scss */
+/* line 134, src/sass/components/sections/_work-sample.scss */
 .work-sample .col-tablet-wide-5 a ul li {
   background-color: rgba(0, 255, 0, 0.3);
   display: inline-block;
 }
 
-/* line 117, src/sass/components/sections/_work-sample.scss */
+/* line 139, src/sass/components/sections/_work-sample.scss */
 .work-sample .col-tablet-wide-5 a ul li:not(:last-child):after {
   content: "\002C";
 }
 
-/* line 127, src/sass/components/sections/_work-sample.scss */
+/* line 149, src/sass/components/sections/_work-sample.scss */
 .work-sample .col-tablet-wide-5 a h4 {
   background-color: rgba(255, 0, 0, 0.2);
   font-family: "Muli-SemiBold", sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
   line-height: 24px;
   line-height: 1.5rem;
   margin-top: 28px;
   margin-top: 1.75rem;
 }
 
-/* line 138, src/sass/components/sections/_work-sample.scss */
+@media (min-width: 1024px) and (max-width: 1131px) {
+  /* line 149, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h4 {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 1132px) and (max-width: 1238px) {
+  /* line 149, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h4 {
+    font-size: 15px;
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 1239px) and (max-width: 1346px) {
+  /* line 149, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h4 {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1347px) and (max-width: 1453px) {
+  /* line 149, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h4 {
+    font-size: 17px;
+    font-size: 1.0625rem;
+  }
+}
+
+@media (min-width: 1454px) and (max-width: 1561px) {
+  /* line 149, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h4 {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1562px) and (max-width: 1669px) {
+  /* line 149, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h4 {
+    font-size: 19px;
+    font-size: 1.1875rem;
+  }
+}
+
+@media (min-width: 1670px) and (max-width: 1776px) {
+  /* line 149, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h4 {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1777px) and (max-width: 1884px) {
+  /* line 149, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h4 {
+    font-size: 21px;
+    font-size: 1.3125rem;
+  }
+}
+
+@media (min-width: 1885px) and (max-width: 1991px) {
+  /* line 149, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h4 {
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
+}
+
+@media (min-width: 1992px) and (max-width: 2099px) {
+  /* line 149, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h4 {
+    font-size: 23px;
+    font-size: 1.4375rem;
+  }
+}
+
+@media screen and (min-width: 2100px) {
+  /* line 149, src/sass/components/sections/_work-sample.scss */
+  .work-sample .col-tablet-wide-5 a h4 {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+}
+
+/* line 166, src/sass/components/sections/_work-sample.scss */
 .work-sample .col-tablet-wide-5 a h4:after {
   background-color: rgba(255, 0, 0, 0.2);
   color: transparent;
@@ -892,12 +1514,12 @@ img {
   transition: all 0.4s ease-in-out;
 }
 
-/* line 160, src/sass/components/sections/_work-sample.scss */
+/* line 188, src/sass/components/sections/_work-sample.scss */
 .work-sample .col-tablet-wide-5 a.arrow h4:after {
   color: red;
 }
 
-/* line 167, src/sass/components/sections/_work-sample.scss */
+/* line 195, src/sass/components/sections/_work-sample.scss */
 .work-sample .col-tablet-wide-5 a.arrow.animated h4:after {
   -webkit-animation: arrow-right 0.8s ease-in-out 1 0.1s;
   animation: arrow-right 0.8s ease-in-out 1 0.1s;
@@ -905,7 +1527,7 @@ img {
 
 @-webkit-keyframes arrow-right {
   0%, 100% {
-    margin-left: 0%;
+    margin-left: 0;
   }
   50% {
     margin-left: 6%;
@@ -914,14 +1536,14 @@ img {
 
 @keyframes arrow-right {
   0%, 100% {
-    margin-left: 0%;
+    margin-left: 0;
   }
   50% {
     margin-left: 6%;
   }
 }
 
-/* line 199, src/sass/components/sections/_work-sample.scss */
+/* line 227, src/sass/components/sections/_work-sample.scss */
 .work-sample .col-tablet-wide-7 {
   /**
 		order: 1;
@@ -929,7 +1551,7 @@ img {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 199, src/sass/components/sections/_work-sample.scss */
+  /* line 227, src/sass/components/sections/_work-sample.scss */
   .work-sample .col-tablet-wide-7 {
     float: none;
     display: table-footer-group;
@@ -937,18 +1559,18 @@ img {
 }
 
 @media screen and (min-width: 1024px) {
-  /* line 199, src/sass/components/sections/_work-sample.scss */
+  /* line 227, src/sass/components/sections/_work-sample.scss */
   .work-sample .col-tablet-wide-7 {
     position: absolute;
     bottom: 0;
   }
-  /* line 217, src/sass/components/sections/_work-sample.scss */
+  /* line 245, src/sass/components/sections/_work-sample.scss */
   .work-sample .col-tablet-wide-7:last-child {
     right: 0;
   }
 }
 
-/* line 223, src/sass/components/sections/_work-sample.scss */
+/* line 251, src/sass/components/sections/_work-sample.scss */
 .work-sample .col-tablet-wide-7 img {
   background-color: rgba(255, 0, 0, 0.3);
   vertical-align: top;
