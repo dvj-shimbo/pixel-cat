@@ -151,7 +151,7 @@
 			
 			
 			
-			@include work-sample-padding (1024px, 2100px, 62px, 125px);
+			@include work-sample-padding(1024px, 2100px, 62px, 125px);
 			
 			
 //			@include work-sample-padding (1024px, 2100px, 110px, 229px);
@@ -175,7 +175,15 @@
 
 //				@include rem(max-width, 700px);
 				
+//				margin: 100px;
 				
+				
+				
+				@include media('screen', '<1024px') {
+//					margin: 15% 5%;
+//					margin: 20% 5%;
+					margin: 18% 5% 12%;
+				}
 				
 				
 				@include media('screen', '>=1024px') {
@@ -190,7 +198,7 @@
 				
 				
 				
-				//			@include rem(margin, 162px 72px);
+//			@include rem(margin, 162px 72px);
 				
 				h1 {
 					
@@ -198,10 +206,18 @@
 					
 					font-family: "Muli-SemiBold", sans-serif;
 					
+//					@include rem(font-size, 30px);
 //					@include rem(font-size, 62px);
+					
+					@include media('screen', '<360px') {
+						@include rem(font-size, 30px);
+					}
+					
+					@include work-sample-font-size (360px, 1024px, 31px, 82px);
+
 
 //					@include work-sample-font-size (1024px, 2100px, 58px, 118px, 5.67vw);
-					@include work-sample-font-size (1024px, 2100px, 58px, 118px);
+					@include work-sample-font-size(1024px, 2100px, 58px, 118px);
 					
 					@include media('screen', '>=2100px') {
 //					@include rem(margin, 0 68px 39px);
@@ -214,21 +230,38 @@
 				ul {
 					font-family: "Muli-ExtraBold", sans-serif;
 					
+/**
+					@include rem(font-size, 13px);
+					@include rem(line-height, 14px);
+					@include rem(margin-top, 26px);
+/**/
 					
+/**
+					@include rem(font-size, 16px);
+					@include rem(line-height, 21px);
+					@include rem(margin-top, 32px);
+/**/
 					
-//					@include rem(font-size, 14px);
-//					@include rem(line-height, 18px);
+					@include media('screen', '<360px') {
+						@include rem(font-size, 12px);
+						@include rem(line-height, 15px);
+						@include rem(margin-top, 24px);
+					}
+					
+					@include work-sample-ul(360px, 1024px, 13px, 18px);
+
 /**/
 //					@include work-sample-font-size (1024px, 2100px, 10px, 19px);
-					@include work-sample-ul (1024px, 2100px, 12px, 19px);
+					@include work-sample-ul(1024px, 2100px, 12px, 19px);
 					
 					@include media('screen', '>=2100px') {
+						
 						@include rem(font-size, 20px);
 						@include rem(line-height, 26px);
 						@include rem(margin-top, 40px);
 					}
 /**/
-//					@include rem(margin-top, 28px);
+
 					
 					&:before {
 //						content: "\2014\2014\00a0\00a0\00a0";
@@ -256,13 +289,33 @@
 					
 					font-family: "Muli-SemiBold", sans-serif;
 					
+/**
+					@include rem(font-size, 14px);
+					@include rem(line-height, 21px);
+					@include rem(margin-top, 25px);
+/**/
+					
+/**
+					@include rem(font-size, 18px);
+					@include rem(line-height, 27px);
+					@include rem(margin-top, 32px);
+/**/
+					@include media('screen', '<360px') {
+						@include rem(font-size, 14px);
+						@include rem(line-height, 21px);
+						@include rem(margin-top, 25px);
+					}
+					
+					@include work-sample-h4(360px, 1024px, 15px, 20px);
+					
 //					@include rem(font-size, 16px);
 //					@include rem(line-height, 24px);
 //					@include rem(margin-top, 28px);
 					
-					@include work-sample-h4 (1024px, 2100px, 14px, 23px);
+					@include work-sample-h4(1024px, 2100px, 14px, 23px);
 					
 					@include media('screen', '>=2100px') {
+						
 						@include rem(font-size, 24px);
 						@include rem(line-height, 36px);
 						@include rem(margin-top, 42px);
@@ -288,7 +341,7 @@
 							
 //							@include rem(font-size, 26px);
 							
-							@include work-sample-font-size (1024px, 2100px, 22px, 35px);
+							@include work-sample-font-size(1024px, 2100px, 22px, 35px);
 							
 							@include media('screen', '>=2100px') {
 								@include rem(font-size, 36px);
@@ -382,11 +435,26 @@
 				background-color: rgba(255,0,0,0.3);
 				
 				vertical-align: top;
+				
+				@include media('screen', '<1024px') {
+					position: relative;
+					width: 95%;
+					@include rem(min-width, 400px);
+//					@include rem(max-width, 980px);
+					
+					left: 50%;
+					@include translate (-50%, 0);
+				}
+				
+				@include media('screen', '>=1024px') {
+					width: 90%;
+					@include rem(max-width, 1100px);
+				}
+				
 //				width: 92%;
-				width: 90%;
 //				width: 89.45%;
 //				@include rem(max-width, 1125px);
-				@include rem(max-width, 1100px);
+			
 				
 			}
 		}
