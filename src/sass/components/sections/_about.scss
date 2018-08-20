@@ -1,0 +1,130 @@
+/*************************** About Section Styles ****************************/
+
+.about {
+    background-color: rgba(0,0,255,0.2);
+
+//	text-align: center;
+
+//	position: relative;
+//	
+//	padding: 10% 0;
+//	@include box-sizing(border-box);
+
+	margin: 0 auto;
+
+	@include rem(max-width, 2100px);
+
+
+
+    a {
+		background-color: rgba(255,255,0,0.3);
+		
+		text-decoration: none;
+
+        display: block;
+//		display: inline-block;
+//		position: relative;
+//		top: 10px;
+//		text-align: left;
+        
+
+
+//		@include box-sizing(border-box);
+
+        margin: 10% auto;
+
+//		margin: 10% 5%;
+
+
+		width: 90%;
+		
+		@include rem(max-width, 720px);
+
+		h4 {
+			background-color: rgba(255,0,0,0.1);
+
+			font-family: "Muli-ExtraBold", sans-serif;
+
+			@include rem(font-size, 18px);
+
+//			@include rem(padding-bottom, 28px);
+
+
+			&:before {
+				content: "\2014\00a0\00a0";
+			}
+
+			
+		}
+
+		p {
+			background-color: rgba(0,255,0,0.1);
+
+			position: relative;
+
+			@include rem(margin-top, 28px);
+
+			@include rem(font-size, 18px);
+			@include rem(line-height, 30px);
+
+			&:after {
+				@include background-color(0,255,0,0.3);
+
+//				opacity: 0;
+	
+				content: "\f101";
+				position: absolute;
+
+				left: 0;
+				margin-top: 9%;
+	
+	
+//				color: red;
+	
+				font-family: icons;
+
+				@include transition(all 0.4s ease-in-out);
+
+				@include rem(font-size, 22px);
+			}
+
+		}
+
+		&.arrow {
+			p {
+				&:after {
+//					color:red;
+					opacity: 1;
+				}
+			}
+
+			&.animated {
+				p {
+					&:after {
+						@-webkit-keyframes about-arrow-right {
+							0%, 100% {
+								margin-left: 0;
+							}
+							50% {
+								margin-left: 15%;
+							}
+						}
+						@keyframes about-arrow-right {
+							0%, 100% {
+								margin-left: 0;
+							}
+							50% {
+								margin-left: 15%;
+							}
+						}
+						-webkit-animation: about-arrow-right 0.8s ease-in-out 1 0.1s;
+						animation: about-arrow-right 0.8s ease-in-out 1 0.1s;
+					}
+				}
+			}
+
+		}
+
+
+    }
+}

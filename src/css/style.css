@@ -202,14 +202,14 @@ body {
   /**
 //  background-image: url(../img/dev/Main-Page_2560_2_a.png);
 
-//	background-image: url(../img/dev/Main-Page_1366x768_2_a.png);
-//	background-position: 30px 0;
+	background-image: url(../img/dev/Main-Page_1366x768_2_a.png);
+	background-position: -36px 12px;
 	
 //	background-image: url(../img/dev/Main-Page_tablet-768x1024_2_a.png);
 //	background-position: 0px 16px;
 	
-	background-image: url(../img/dev/Main-Page_mobile-360x640_2_a.png);
-	background-position: 2px 8px;
+//	background-image: url(../img/dev/Main-Page_mobile-360x640_2_a.png);
+//	background-position: 2px 8px;
 
 	background-repeat: no-repeat;
 /**/
@@ -2867,16 +2867,16 @@ i, em {
 }
 
 @media screen and (min-width: 1024px) {
-  /* line 361, src/sass/components/sections/_work-sample.scss */
+  /* line 360, src/sass/components/sections/_work-sample.scss */
   .work-sample .row .col-tablet-wide-5 a.arrow h4:after {
     opacity: 1;
   }
-  /* line 369, src/sass/components/sections/_work-sample.scss */
+  /* line 368, src/sass/components/sections/_work-sample.scss */
   .work-sample .row .col-tablet-wide-5 a.arrow.animated h4:after {
-    -webkit-animation: arrow-right 0.8s ease-in-out 1 0.1s;
-    animation: arrow-right 0.8s ease-in-out 1 0.1s;
+    -webkit-animation: work-sample-arrow-right 0.8s ease-in-out 1 0.1s;
+    animation: work-sample-arrow-right 0.8s ease-in-out 1 0.1s;
   }
-  @-webkit-keyframes arrow-right {
+  @-webkit-keyframes work-sample-arrow-right {
     0%, 100% {
       margin-left: 0;
     }
@@ -2884,7 +2884,7 @@ i, em {
       margin-left: 6%;
     }
   }
-  @keyframes arrow-right {
+  @keyframes work-sample-arrow-right {
     0%, 100% {
       margin-left: 0;
     }
@@ -2892,17 +2892,10 @@ i, em {
       margin-left: 6%;
     }
   }
-}
-
-/* line 404, src/sass/components/sections/_work-sample.scss */
-.work-sample .row .col-tablet-wide-7 {
-  /**
-			order: 1;
-/**/
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 404, src/sass/components/sections/_work-sample.scss */
+  /* line 403, src/sass/components/sections/_work-sample.scss */
   .work-sample .row .col-tablet-wide-7 {
     float: none;
     display: table-footer-group;
@@ -2910,30 +2903,31 @@ i, em {
 }
 
 @media screen and (min-width: 1024px) {
-  /* line 404, src/sass/components/sections/_work-sample.scss */
+  /* line 403, src/sass/components/sections/_work-sample.scss */
   .work-sample .row .col-tablet-wide-7 {
     position: absolute;
     bottom: 0;
   }
-  /* line 423, src/sass/components/sections/_work-sample.scss */
+  /* line 422, src/sass/components/sections/_work-sample.scss */
   .work-sample .row .col-tablet-wide-7:first-child img {
     float: right;
   }
-  /* line 428, src/sass/components/sections/_work-sample.scss */
+  /* line 427, src/sass/components/sections/_work-sample.scss */
   .work-sample .row .col-tablet-wide-7:last-child {
     right: 0;
   }
 }
 
-/* line 434, src/sass/components/sections/_work-sample.scss */
+/* line 433, src/sass/components/sections/_work-sample.scss */
 .work-sample .row .col-tablet-wide-7 img {
   background-color: rgba(255, 0, 0, 0.3);
   vertical-align: top;
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 434, src/sass/components/sections/_work-sample.scss */
+  /* line 433, src/sass/components/sections/_work-sample.scss */
   .work-sample .row .col-tablet-wide-7 img {
+    display: block;
     position: relative;
     width: 95%;
     min-width: 400px;
@@ -2948,11 +2942,106 @@ i, em {
 }
 
 @media screen and (min-width: 1024px) {
-  /* line 434, src/sass/components/sections/_work-sample.scss */
+  /* line 433, src/sass/components/sections/_work-sample.scss */
   .work-sample .row .col-tablet-wide-7 img {
     width: 90%;
     max-width: 1100px;
     max-width: 68.75rem;
+  }
+}
+
+/*************************** About Section Styles ****************************/
+/* line 3, src/sass/components/sections/_about.scss */
+.about {
+  background-color: rgba(0, 0, 255, 0.2);
+  margin: 0 auto;
+  max-width: 2100px;
+  max-width: 131.25rem;
+}
+
+/* line 19, src/sass/components/sections/_about.scss */
+.about a {
+  background-color: rgba(255, 255, 0, 0.3);
+  text-decoration: none;
+  display: block;
+  margin: 10% auto;
+  width: 90%;
+  max-width: 720px;
+  max-width: 45rem;
+}
+
+/* line 43, src/sass/components/sections/_about.scss */
+.about a h4 {
+  background-color: rgba(255, 0, 0, 0.1);
+  font-family: "Muli-ExtraBold", sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+/* line 53, src/sass/components/sections/_about.scss */
+.about a h4:before {
+  content: "\2014\00a0\00a0";
+}
+
+/* line 60, src/sass/components/sections/_about.scss */
+.about a p {
+  background-color: rgba(0, 255, 0, 0.1);
+  position: relative;
+  margin-top: 28px;
+  margin-top: 1.75rem;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 30px;
+  line-height: 1.875rem;
+}
+
+/* line 70, src/sass/components/sections/_about.scss */
+.about a p:after {
+  background: transparent;
+  background: rgba(0, 255, 0, 0.3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#4D00FF00', EndColorStr='#4D00FF00')";
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#4D00FF00', EndColorStr='#4D00FF00');
+  zoom: 1 !important;
+  content: "\f101";
+  position: absolute;
+  left: 0;
+  margin-top: 9%;
+  font-family: icons;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  font-size: 22px;
+  font-size: 1.375rem;
+}
+
+/* line 95, src/sass/components/sections/_about.scss */
+.about a.arrow p:after {
+  opacity: 1;
+}
+
+/* line 103, src/sass/components/sections/_about.scss */
+.about a.arrow.animated p:after {
+  -webkit-animation: about-arrow-right 0.8s ease-in-out 1 0.1s;
+  animation: about-arrow-right 0.8s ease-in-out 1 0.1s;
+}
+
+@-webkit-keyframes about-arrow-right {
+  0%, 100% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 15%;
+  }
+}
+
+@keyframes about-arrow-right {
+  0%, 100% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 15%;
   }
 }
 

@@ -325,7 +325,6 @@
 						&:after {
 //							background-color: rgba(255,0,0,0.2);
 
-//							color: transparent;
 							opacity: 0;
 							
 							content: "\f101";
@@ -339,7 +338,7 @@
 							
 							@include transition(all 0.4s ease-in-out);
 							
-//							@include rem(font-size, 26px);
+//							@include rem(font-size, 22px);
 							
 							@include work-sample-font-size(1024px, 2100px, 22px, 35px);
 							
@@ -367,7 +366,7 @@
 						&.animated {
 							h4 {
 								&:after {
-									@-webkit-keyframes arrow-right {
+									@-webkit-keyframes work-sample-arrow-right {
 										0%, 100% {
 											margin-left: 0;
 										}
@@ -375,7 +374,7 @@
 											margin-left: 6%;
 										}
 									}
-									@keyframes arrow-right {
+									@keyframes work-sample-arrow-right {
 										0%, 100% {
 											margin-left: 0;
 										}
@@ -383,8 +382,8 @@
 											margin-left: 6%;
 										}
 									}
-									-webkit-animation: arrow-right 0.8s ease-in-out 1 0.1s;
-									animation: arrow-right 0.8s ease-in-out 1 0.1s;
+									-webkit-animation: work-sample-arrow-right 0.8s ease-in-out 1 0.1s;
+									animation: work-sample-arrow-right 0.8s ease-in-out 1 0.1s;
 								}
 							}
 						}
@@ -403,9 +402,9 @@
 		
 		.col-tablet-wide-7 {
 			
-/**
-			order: 1;
-/**/
+
+//			order: 1;
+
 //			display: table-header-group;
 			
 			@include media('screen', '<1024px') {
@@ -437,6 +436,7 @@
 				vertical-align: top;
 				
 				@include media('screen', '<1024px') {
+					display: block;
 					position: relative;
 					width: 95%;
 					@include rem(min-width, 400px);
