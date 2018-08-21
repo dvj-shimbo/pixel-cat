@@ -1,5 +1,40 @@
 /*************************** About Section Styles ****************************/
 
+
+@mixin about-font-size ($media-min, $media-max, $font-size-min, $font-size-max) {
+	$d: ($font-size-max - $font-size-min) / 1px;
+	@for $i from 0 through $d {
+		$step: ($media-max - $media-min) / ($d + 1);
+		$min: $i * $step + $media-min;
+		$max: $min + $step;
+		@include media('>=' + round($min), '<' + round($max)) {
+			$font-size: $i + $font-size-min;
+			@include rem(font-size, $font-size);
+		}
+	}
+}
+
+
+@mixin about-p ($media-min, $media-max, $font-size-min, $font-size-max) {
+	$d: ($font-size-max - $font-size-min) / 1px;
+	@for $i from 0 through $d {
+		$step: ($media-max - $media-min) / ($d + 1);
+		$min: $i * $step + $media-min;
+		$max: $min + $step;
+		@include media('>=' + round($min), '<' + round($max)) {
+			$font-size: $i + $font-size-min;
+			@include rem(font-size, $font-size);
+			@include rem(line-height, round($font-size * 1.5));
+			@include rem(margin-top, round($font-size * 1.375));
+			
+		}
+	}
+}
+
+
+
+
+
 .about {
     background-color: rgba(0,0,255,0.2);
 
@@ -12,11 +47,15 @@
 
 	margin: 0 auto;
 
-	@include rem(max-width, 2100px);
+//	@include rem(max-width, 2100px);
+	@include rem(max-width, 2560px);
 
 
 
     a {
+
+//		opacity: 0.3;
+
 		background-color: rgba(255,255,0,0.3);
 		
 		text-decoration: none;
@@ -31,23 +70,56 @@
 
 //		@include box-sizing(border-box);
 
-        margin: 10% auto;
+ //       margin: 10% auto;
 
 //		margin: 10% 5%;
 
-
-		width: 90%;
 		
-		@include rem(max-width, 720px);
+		@include media('screen', '<1024px') {
+//			margin: 100px auto;
+			@include rem(margin, 100px auto);
+			width: 90%;
+			@include rem(max-width, 720px);
+		}
+		
+
+
+		@include media('screen', '>=1024px') {
+			margin: 10% auto;
+			width: 50%;
+			@include rem(min-width, 720px);
+		}
+
+		
+
+		
+
+
 
 		h4 {
 			background-color: rgba(255,0,0,0.1);
 
 			font-family: "Muli-ExtraBold", sans-serif;
 
-			@include rem(font-size, 18px);
+//			@include rem(font-size, 18px);
+//			@include rem(font-size, 24px);
 
-//			@include rem(padding-bottom, 28px);
+			@include media('screen', '<480px') {
+				@include rem(font-size, 15px);
+			}
+
+//			@include about-font-size (480px, 2100px, 16px, 23px);
+			@include about-font-size (480px, 1366px, 16px, 18px);
+
+//			@include media('>=480px', '<1366px') {
+//				@include rem(font-size, 18px);
+//			}
+
+			@include about-font-size (1366px, 2100px, 19px, 23px);
+
+			@include media('screen', '>=2100px') {
+				@include rem(font-size, 24px);
+			}
 
 
 			&:before {
@@ -62,68 +134,103 @@
 
 			position: relative;
 
-			@include rem(margin-top, 28px);
-
+			
+/**
 			@include rem(font-size, 18px);
 			@include rem(line-height, 30px);
+			@include rem(margin-top, 28px);
+/**/
 
-			&:after {
-				@include background-color(0,255,0,0.3);
+/**
+			@include rem(font-size, 32px);
+			@include rem(line-height, 48px);
+			@include rem(margin-top, 44px);
+/**/
+			@include media('screen', '<480px') {
+				@include rem(font-size, 15px);
+				@include rem(line-height, 23px);
+				@include rem(margin-top, 21px);
+			}
 
-//				opacity: 0;
+//			@include about-p (480px, 2100px, 15px, 31px);
+			@include about-p (480px, 1366px, 16px, 18px);
+			@include about-p (1366px, 2100px, 19px, 31px);
+
+			@include media('screen', '>=2100px') {
+				@include rem(font-size, 32px);
+				@include rem(line-height, 48px);
+				@include rem(margin-top, 44px);
+			}
+
+			
+			@include media('screen', '>=1024px') {
+				&:after {
+//					@include background-color(0,255,0,0.3);
+
+					opacity: 0;
 	
-				content: "\f101";
-				position: absolute;
+					content: "\f101";
+					position: absolute;
 
-				left: 0;
-				margin-top: 9%;
+					left: 0;
+					margin-top: 9%;
 	
 	
-//				color: red;
+//					color: red;
 	
-				font-family: icons;
+					font-family: icons;
 
-				@include transition(all 0.4s ease-in-out);
+					@include transition(all 0.4s ease-in-out);
 
-				@include rem(font-size, 22px);
+//					@include rem(font-size, 22px);
+
+					@include about-font-size(1024px, 2100px, 22px, 35px);
+							
+					@include media('screen', '>=2100px') {
+						@include rem(font-size, 36px);
+					}
+
+				}
 			}
 
 		}
 
-		&.arrow {
-			p {
-				&:after {
-//					color:red;
-					opacity: 1;
-				}
-			}
-
-			&.animated {
+		@include media('screen', '>=1024px') {
+			&.arrow {
 				p {
 					&:after {
-						@-webkit-keyframes about-arrow-right {
-							0%, 100% {
-								margin-left: 0;
+//						color:red;
+						opacity: 1;
+					}
+				}
+	
+				&.animated {
+					p {
+						&:after {
+							@-webkit-keyframes about-arrow-right {
+								0%, 100% {
+									margin-left: 0;
+								}
+								50% {
+									margin-left: 15%;
+								}
 							}
-							50% {
-								margin-left: 15%;
+							@keyframes about-arrow-right {
+								0%, 100% {
+									margin-left: 0;
+								}
+								50% {
+									margin-left: 15%;
+								}
 							}
+							-webkit-animation: about-arrow-right 0.8s ease-in-out 1 0.1s;
+							animation: about-arrow-right 0.8s ease-in-out 1 0.1s;
 						}
-						@keyframes about-arrow-right {
-							0%, 100% {
-								margin-left: 0;
-							}
-							50% {
-								margin-left: 15%;
-							}
-						}
-						-webkit-animation: about-arrow-right 0.8s ease-in-out 1 0.1s;
-						animation: about-arrow-right 0.8s ease-in-out 1 0.1s;
 					}
 				}
 			}
-
 		}
+		
 
 
     }

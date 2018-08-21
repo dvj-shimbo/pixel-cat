@@ -27,7 +27,7 @@
 
 
 
-//@mixin work-sample-font-size ($media-min, $media-max, $font-size-min, $font-size-max, $font-size-vw) {
+
 @mixin work-sample-font-size ($media-min, $media-max, $font-size-min, $font-size-max) {
 	$d: ($font-size-max - $font-size-min) / 1px;
 	@for $i from 0 through $d {
@@ -37,9 +37,6 @@
 		@include media('>=' + round($min), '<' + round($max)) {
 			$font-size: $i + $font-size-min;
 			@include rem(font-size, $font-size);
-			
-//			font-size: $font-size-vw;
-		
 		}
 	}
 }
